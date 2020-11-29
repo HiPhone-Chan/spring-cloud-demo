@@ -1,0 +1,23 @@
+server:
+  port: 9100
+spring:
+  main:
+    banner-mode: 'off'
+  application:
+    name: cloud-gateway
+
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
+
+eureka:
+  client:
+    service-url:
+      default: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api/service/**
+      serviceId: cloud-service

@@ -1,0 +1,15 @@
+server:
+  port: 9000
+spring:
+  main:
+    banner-mode: 'off'
+  application:
+    name: cloud-service
+logging:
+  level:
+    root: info
+
+eureka:
+  client:
+    service-url:
+      default: http://localhost:8761/eureka/

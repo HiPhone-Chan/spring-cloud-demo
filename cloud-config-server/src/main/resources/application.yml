@@ -1,0 +1,25 @@
+server:
+  port: 8888
+spring:
+  main:
+    banner-mode: 'off'
+  application:
+    name: cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${HOME}/tmp/config
+#          uri: https://github.com/forezp/SpringcloudConfig/
+#          searchPaths: respo
+#      label: master
+
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
+
+#eureka:
+#  client:
+#    service-url:
+#      default: http://localhost:8761/eureka/
